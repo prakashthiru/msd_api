@@ -23,14 +23,27 @@ gem 'redis', '~> 3.0'
 # For Redis Namespaces
 gem 'redis-namespace'
 
-# Authentication
-gem 'devise'
+# # Authentication
+# gem 'devise'
+
+# API response templates
+gem 'rabl'
+
+# Use SCSS for stylesheets
+gem 'sass-rails'
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
+# Use CoffeeScript for .coffee assets and views
+gem 'coffee-rails'
 
 # For Interacting with API
 gem 'httparty'
 
-# Use Puma as the app server
-gem 'puma', '~> 3.7'
+# # Use Puma as the app server
+# gem 'puma', '~> 3.7'
+
+# App server
+gem 'thin'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
@@ -38,12 +51,12 @@ gem 'jbuilder', '~> 2.5'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# For Caching
-gem 'dalli'
+# # For Caching
+# gem 'dalli'
 
-# Caching
-gem 'identity_cache'
-gem 'cityhash'
+# # Caching
+# gem 'identity_cache'
+# gem 'cityhash'
 
 gem 'rb-readline'
 

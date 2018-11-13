@@ -8,11 +8,9 @@
 /.bundle
 
 # Ignore except config files which has samples
-/config/dalli.yml
-/config/database.yml
+/config/msd_api.yml
 /config/redis.yml
 /config/secrets.yml
-/config/msd_api.yml
 
 /Procfile
 

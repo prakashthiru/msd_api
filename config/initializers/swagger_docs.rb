@@ -10,9 +10,9 @@ Swagger::Docs::Config.register_apis({
     # the output location where your .json files are written to
     api_file_path: "public/api/v1/",
     # the URL base path to your API
-    base_path: Ideation::Settings[:url],
+    base_path: MsdApi::Settings[:url],
     # if you want to delete all .json files at each generation
     clean_directory: false,
-    base_api_controller: CommonBaseController
+    base_api_controller: ApplicationController
   }
 })

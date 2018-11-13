@@ -16,6 +16,3 @@ def build_url()
 end
 
 MsdApi::Settings[:url] = build_url
-
-MsdApi::Settings[:authentication] ||= HashWithIndifferentAccess.new()
-MsdApi::Settings[:authentication][:session_expiration_time] ||= 3600

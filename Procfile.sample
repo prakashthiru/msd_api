@@ -1,2 +1,1 @@
 redis_server: redis-server
-memcached: memcached

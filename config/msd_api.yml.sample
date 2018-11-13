@@ -5,8 +5,6 @@ defaults: &defaults
   port: 3000
   protocol: http
   relative_url_root: /
-  authentication:
-    session_expiration_time: 540_000 # in secs
 
 development: &development
   <<: *defaults
