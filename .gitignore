@@ -7,6 +7,13 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore except config files which has samples
+/config/msd_api.yml
+/config/redis.yml
+/config/secrets.yml
+
+/Procfile
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -14,3 +21,4 @@
 !/tmp/.keep
 
 .byebug_history
+
