@@ -1,0 +1,14 @@
+default: &default
+  namespace: msd_api
+  host: localhost
+  port: 6379
+  db: 2
+
+development:
+  <<: *default
+
+production:
+  <<: *default
+
+test:
+  <<: *default

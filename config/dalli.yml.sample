@@ -1,0 +1,13 @@
+default: &default
+  namespace: Ideation
+  host: ['localhost']
+
+development:
+  <<: *default
+
+production:
+  <<: *default
+  host: localhost
+
+test:
+  <<: *default

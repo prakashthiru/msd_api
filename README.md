@@ -1,24 +1,52 @@
-# README
+# MSD API Rails App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+MSD API Application
 
-Things you may want to cover:
+## System Dependencies
 
-* Ruby version
+  * [PostgreSQL](http://www.postgresql.org/)
+  * [Redis](http://redis.io/)
 
-* System dependencies
+## Clone the repository
 
-* Configuration
+```
+git clone https://github.com/prakashthiru/msd_api.git
+```
 
-* Database creation
+## Install Gems
+```
+bundle install --local
+```
 
-* Database initialization
+## Copy sample files and edit them as appropriate
+```
+cp Procfile.sample Procfile
 
-* How to run the test suite
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Database initialization
 
-* Deployment instructions
+```
+bundle exec rake db:setup
 
-* ...
+```
+
+## Start necessary services
+
+```
+foreman start
+```
+
+## Run the test suite
+
+```
+RAILS_ENV=test bundle exec rake
+```
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Added some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
