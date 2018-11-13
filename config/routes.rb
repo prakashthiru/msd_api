@@ -11,7 +11,8 @@ Rails.application.routes.draw do
       # api/v1/analytics_controller
       resources :analytics, only: [] do
         collection do
-          get :example
+          get :recent_item
+          get :brands_count
         end
       end
 

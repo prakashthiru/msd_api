@@ -15,10 +15,11 @@
 /Procfile
 
 # Ignore all logfiles and tempfiles.
+/public/api/v1
+
 /log/*
 /tmp/*
 !/log/.keep
 !/tmp/.keep
 
 .byebug_history
-

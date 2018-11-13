@@ -5,10 +5,20 @@
   "resourcePath": "analytics",
   "apis": [
     {
-      "path": "/api/v1/analytics/example.json",
+      "path": "/api/v1/analytics/recent_item.json",
       "operations": [
         {
-          "summary": "Testing end point",
+          "summary": "getRecentItem",
+          "notes": "returns the most recent item added on the given date. ex: 2017-02-03",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "date",
+              "type": "string",
+              "description": "date",
+              "required": true
+            }
+          ],
           "responseMessages": [
             {
               "code": 200,
@@ -21,7 +31,39 @@
               "message": "Forbidden"
             }
           ],
-          "nickname": "Api::V1::Analytics#example",
+          "nickname": "Api::V1::Analytics#recent_item",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/api/v1/analytics/brands_count.json",
+      "operations": [
+        {
+          "summary": "getBrandsCount",
+          "notes": "returns the count of each brands added on the given date. ex: 2017-02-03",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "date",
+              "type": "string",
+              "description": "date",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "responseModel": null,
+              "message": "Ok"
+            },
+            {
+              "code": 403,
+              "responseModel": null,
+              "message": "Forbidden"
+            }
+          ],
+          "nickname": "Api::V1::Analytics#brands_count",
           "method": "get"
         }
       ]
