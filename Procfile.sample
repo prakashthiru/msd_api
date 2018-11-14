@@ -1,1 +1,2 @@
 redis_server: redis-server
+thin: thin start

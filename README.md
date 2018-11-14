@@ -15,7 +15,7 @@ git clone https://github.com/prakashthiru/msd_api.git
 
 ## Install Gems
 ```
-bundle install --local
+bundle install
 ```
 
 ## Copy sample files and edit them as appropriate
@@ -35,7 +35,7 @@ bundle exec rake swagger:docs
 ## Start necessary services
 
 ```
-foreman start
+thin start
 ```
 
 ## Run the test suite
