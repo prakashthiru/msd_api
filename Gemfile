@@ -29,6 +29,10 @@ gem 'redis-namespace'
 # API response templates
 gem 'rabl'
 
+# JSON parser
+gem 'rails-patch-json-encode'
+gem 'oj'
+
 # Use SCSS for stylesheets
 gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets

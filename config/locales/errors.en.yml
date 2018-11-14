@@ -1,0 +1,4 @@
+en:
+  errors:
+    missing_param: "%{key} must be present in request parameters"
+    invalid_date: "Given date is invalid. Valid format is dd-mm-yyyy"

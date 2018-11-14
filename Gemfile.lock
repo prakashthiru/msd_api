@@ -92,6 +92,7 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
+    oj (3.4.0)
     rabl (0.14.0)
       activesupport (>= 2.3.14)
     rack (2.0.6)
@@ -114,6 +115,8 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
+    rails-patch-json-encode (0.1.1)
+      multi_json (~> 1.0, >= 1.9.3)
     railties (5.1.6)
       actionpack (= 5.1.6)
       activesupport (= 5.1.6)
@@ -189,8 +192,10 @@ DEPENDENCIES
   httparty
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  oj
   rabl
   rails (~> 5.1.4)
+  rails-patch-json-encode
   rb-readline
   redis (~> 3.0)
   redis-namespace
