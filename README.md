@@ -38,12 +38,6 @@ bundle exec rake swagger:docs
 thin start
 ```
 
-## Run the test suite
-
-```
-RAILS_ENV=test bundle exec rake
-```
-
 ## Notes
 
 * Configure application `host` & `port` in *msd_api.yml*
