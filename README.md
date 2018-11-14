@@ -23,6 +23,7 @@ bundle install --local
 cp config/msd_api.yml.sample config/msd_api.yml
 cp config/redis.yml.sample config/redis.yml
 cp config/secrets.yml.sample config/secrets.yml
+
 cp Procfile.sample Procfile
 ```
 

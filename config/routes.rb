@@ -13,6 +13,7 @@ Rails.application.routes.draw do
         collection do
           get :recent_item
           get :brands_count
+          get :items_by_color
         end
       end
 

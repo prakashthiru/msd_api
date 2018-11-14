@@ -1,4 +1,4 @@
-object @result
+object @item
 
 attributes :id, :brand
 
