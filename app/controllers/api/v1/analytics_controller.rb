@@ -57,9 +57,19 @@ class Api::V1::AnalyticsController < ApplicationController
   def items_by_color
     raise MsdApi::Exception::InvalidParameter.new(_('errors.missing_param', key: :color)) unless params[:color]
 
-    data = MsdApi::RedisColorAnalytics.lrange(params[:color].downcase, 0, -1)
-    result = data.map {|x| JSON.parse x.gsub("u'", %q(')).gsub("'", %q("))}
-    @items = result.sort_by { |x| x['dateAdded'] }.reverse
+    begin
+      data = MsdApi::RedisColorAnalytics.lrange(params[:color].downcase, 0, -1)
+      result = data.map {|x| JSON.parse x.gsub(/\"/, %q('))
+                          .gsub(/\su'/, "\s'")
+                          .gsub(/(\W)(')/) { "#$1\"" }
+                          .gsub(/(')(\W)/) { "\"#$2" }
+                        }
+      @items = result.sort_by! { |x| x['dateAdded'] }.reverse.first(10)
+
+    rescue JSON::ParserError => e
+      render_error_json(_('errors.data_parse_error'))
+    end
+
   end
 
   private
