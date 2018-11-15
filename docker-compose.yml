@@ -1,0 +1,35 @@
+version: '3'
+services:
+  web:
+    image: prakashthiru/msd_api:ver_1
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/myapp
+    ports:
+      - "3000:3000"
+    networks:
+      - redis-net
+    tty: true
+
+  redis:
+    image: redis:4.0.5-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    hostname: redis
+    networks:
+      - redis-net
+    volumes:
+      - redis-data:/data
+
+  msd_spark:
+    image: prakashthiru/msd_spark:ver_1
+    depends_on:
+      - redis
+    networks:
+      - redis-net
+
+networks:
+  redis-net:
+
+volumes:
+  redis-data:
+

@@ -2,6 +2,8 @@
 
 MSD API Application
 
+## RUNNING STANDALONE
+
 ## System Dependencies
 
   * [Ruby](https://www.ruby-lang.org/en/)
@@ -46,7 +48,39 @@ thin start
 * API documentaion can be accessed via `/docs` end point
 * Application's health check up can done via `/health_check`
 
-## Contributing
+## RUNNING VIA DOCKER
+
+## System Dependencies
+
+  * [Docker](https://docs.docker.com/get-started/)
+  * [Docker Compose](https://docs.docker.com/compose/overview/)
+
+## Clone the repository
+
+```
+git clone https://github.com/prakashthiru/msd_api.git
+```
+Docker Compose file (added in this repository) includes the following images
+
+```
+* RAILS API : prakashthiru/msd_api:ver_1
+* SPARK APP : prakashthiru/msd_spark:ver_1
+* REDIS DB : redis:4.0.5-alpine
+```
+
+## Setup
+
+```
+sudo docker-compose up
+```
+
+## Explore the APIs
+
+```
+http://localhost:3000/docs
+```
+
+## CONTRIBUTING
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)

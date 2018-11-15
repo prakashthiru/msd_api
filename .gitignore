@@ -7,19 +7,19 @@
 # Ignore bundler config.
 /.bundle
 
-# Ignore except config files which has samples
-/config/msd_api.yml
-/config/redis.yml
-/config/secrets.yml
+# # Ignore except config files which has samples
+# /config/msd_api.yml
+# /config/redis.yml
+# /config/secrets.yml
 
-/Procfile
+# /Procfile
 
-# Ignore all logfiles and tempfiles.
-/public/api/v1
+# # Ignore all logfiles and tempfiles.
+# /public/api/v1
 
-/log/*
-/tmp/*
+/log
+/tmp
 !/log/.keep
 !/tmp/.keep
 
-.byebug_history
+/.byebug_history
